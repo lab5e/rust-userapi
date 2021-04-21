@@ -4,17 +4,17 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**user_create_token**](TokensApi.md#user_create_token) | **post** /user/tokens | Create token
-[**user_delete_token**](TokensApi.md#user_delete_token) | **delete** /user/tokens/{token} | Remove token
-[**user_list_tokens**](TokensApi.md#user_list_tokens) | **get** /user/tokens | List tokens
-[**user_retrieve_token**](TokensApi.md#user_retrieve_token) | **get** /user/tokens/{token} | Retrieve token
-[**user_update_token**](TokensApi.md#user_update_token) | **patch** /user/tokens/{token} | Update token
+[**create_token**](TokensApi.md#create_token) | **post** /user/tokens | Create token
+[**delete_token**](TokensApi.md#delete_token) | **delete** /user/tokens/{token} | Remove token
+[**list_tokens**](TokensApi.md#list_tokens) | **get** /user/tokens | List tokens
+[**retrieve_token**](TokensApi.md#retrieve_token) | **get** /user/tokens/{token} | Retrieve token
+[**update_token**](TokensApi.md#update_token) | **patch** /user/tokens/{token} | Update token
 
 
 
-## user_create_token
+## create_token
 
-> crate::models::Token user_create_token(body)
+> crate::models::Token create_token(body)
 Create token
 
 ### Parameters
@@ -40,9 +40,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## user_delete_token
+## delete_token
 
-> serde_json::Value user_delete_token(token)
+> crate::models::DeleteTokenResponse delete_token(token)
 Remove token
 
 ### Parameters
@@ -54,7 +54,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**crate::models::DeleteTokenResponse**](DeleteTokenResponse.md)
 
 ### Authorization
 
@@ -68,9 +68,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## user_list_tokens
+## list_tokens
 
-> crate::models::TokenList user_list_tokens()
+> crate::models::TokenList list_tokens()
 List tokens
 
 ### Parameters
@@ -93,9 +93,9 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## user_retrieve_token
+## retrieve_token
 
-> crate::models::Token user_retrieve_token(token)
+> crate::models::Token retrieve_token(token)
 Retrieve token
 
 ### Parameters
@@ -121,9 +121,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## user_update_token
+## update_token
 
-> crate::models::Token user_update_token(token, body)
+> crate::models::Token update_token(token, body)
 Update token
 
 ### Parameters

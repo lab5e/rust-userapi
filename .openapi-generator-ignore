@@ -1,8 +1,4 @@
-/target/
-**/*.rs.bk
-Cargo.lock
 git_push.sh
+.gitignore
 .openapi-generator/
 .travis.yml
-.vscode/
-

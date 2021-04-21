@@ -4,13 +4,13 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**user_get_user_profile**](ProfileApi.md#user_get_user_profile) | **get** /user/profile | Logged in profile
+[**get_user_profile**](ProfileApi.md#get_user_profile) | **get** /user/profile | Logged in profile
 
 
 
-## user_get_user_profile
+## get_user_profile
 
-> crate::models::UserProfile user_get_user_profile()
+> crate::models::UserProfile get_user_profile()
 Logged in profile
 
 Show your user profile information

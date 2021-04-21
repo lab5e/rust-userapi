@@ -12,15 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct MemberList {
-    #[serde(rename = "members", skip_serializing_if = "Option::is_none")]
-    pub members: Option<Vec<crate::models::Member>>,
+pub struct DeleteInviteResponse {
+    #[serde(rename = "invite", skip_serializing_if = "Option::is_none")]
+    pub invite: Option<Box<crate::models::Invite>>,
 }
 
-impl MemberList {
-    pub fn new() -> MemberList {
-        MemberList {
-            members: None,
+impl DeleteInviteResponse {
+    pub fn new() -> DeleteInviteResponse {
+        DeleteInviteResponse {
+            invite: None,
         }
     }
 }
