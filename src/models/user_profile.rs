@@ -10,8 +10,6 @@
 
 /// UserProfile : Your user profile. You can change the contents of the user profile via the log in service you are using.
 
-
-
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UserProfile {
     #[serde(rename = "userId", skip_serializing_if = "Option::is_none")]
@@ -47,5 +45,3 @@ impl UserProfile {
         }
     }
 }
-
-
