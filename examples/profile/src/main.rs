@@ -2,7 +2,7 @@ use std::env;
 use futures::executor::block_on;
 use userapi::apis::configuration;
 use userapi::apis::configuration::ApiKey;
-use userapi::apis::profile_api::{user_get_user_profile};
+use userapi::apis::profile_api::{get_user_profile};
 
 #[tokio::main]
 async fn main() {
@@ -23,7 +23,7 @@ async fn main() {
     config.api_key = Some(api_key);
 
     // Finally -- get the profile
-    let profile_result = user_get_user_profile(&config);
+    let profile_result = get_user_profile(&config);
 
     // ..and print the result
     match block_on(profile_result) {
