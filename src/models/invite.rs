@@ -10,8 +10,6 @@
 
 /// Invite : Invite. Invites are used to share access to teams. You must be an administrator to generate invites for a team.
 
-
-
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Invite {
     #[serde(rename = "code", skip_serializing_if = "Option::is_none")]
@@ -30,5 +28,3 @@ impl Invite {
         }
     }
 }
-
-
