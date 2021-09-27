@@ -10,8 +10,6 @@
 
 /// InviteList : List of active invites. Onece an invite has been redeemed it will be removed automatically. An administrator of the team can delete unused invites.
 
-
-
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct InviteList {
     #[serde(rename = "invites", skip_serializing_if = "Option::is_none")]
@@ -21,10 +19,6 @@ pub struct InviteList {
 impl InviteList {
     /// List of active invites. Onece an invite has been redeemed it will be removed automatically. An administrator of the team can delete unused invites.
     pub fn new() -> InviteList {
-        InviteList {
-            invites: None,
-        }
+        InviteList { invites: None }
     }
 }
-
-
