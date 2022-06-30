@@ -12,16 +12,13 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Token {
+pub struct AnApiToken {
     /// The resource of the token.  The token applies to the specified resource and any resources below this so the resource `/` applies to the root resource and any resource below the root resource. In the same manner `/collections` will apply to all collectins while `/collections/{id}` will apply to that particular collection.
     #[serde(rename = "resource", skip_serializing_if = "Option::is_none")]
     pub resource: Option<String>,
     /// Write flag for token.  If this is set to `true` the token can be used for write operations in the API such as POST, DELETE and PATCH.
     #[serde(rename = "write", skip_serializing_if = "Option::is_none")]
     pub write: Option<bool>,
-    /// Use this in the `X-API-Token` header when using the API.
-    #[serde(rename = "token", skip_serializing_if = "Option::is_none")]
-    pub token: Option<String>,
     /// Tags for the token.
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<::std::collections::HashMap<String, String>>,
@@ -32,12 +29,11 @@ pub struct Token {
     pub uses: Option<String>,
 }
 
-impl Token {
-    pub fn new() -> Token {
-        Token {
+impl AnApiToken {
+    pub fn new() -> AnApiToken {
+        AnApiToken {
             resource: None,
             write: None,
-            token: None,
             tags: None,
             last_use: None,
             uses: None,

@@ -12,23 +12,17 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Member {
-    #[serde(rename = "teamId", skip_serializing_if = "Option::is_none")]
-    pub team_id: Option<String>,
+pub struct MemberOfATeam {
     #[serde(rename = "role", skip_serializing_if = "Option::is_none")]
     pub role: Option<String>,
-    #[serde(rename = "userId", skip_serializing_if = "Option::is_none")]
-    pub user_id: Option<String>,
     #[serde(rename = "user", skip_serializing_if = "Option::is_none")]
     pub user: Option<Box<crate::models::UserProfile>>,
 }
 
-impl Member {
-    pub fn new() -> Member {
-        Member {
-            team_id: None,
+impl MemberOfATeam {
+    pub fn new() -> MemberOfATeam {
+        MemberOfATeam {
             role: None,
-            user_id: None,
             user: None,
         }
     }

@@ -132,7 +132,7 @@ Update token
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **token** | **String** | The token  Use this in the `X-API-Token` header when using the API. | [required] |
-**body** | [**Token**](Token.md) |  | [required] |
+**body** | [**AnApiToken**](AnApiToken.md) |  | [required] |
 
 ### Return type
 

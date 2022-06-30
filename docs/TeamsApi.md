@@ -184,7 +184,7 @@ Update the team. You must be an administrator of the team to edit it.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **team_id** | **String** | The team ID | [required] |
-**body** | [**InviteRequest**](InviteRequest.md) |  | [required] |
+**body** | [**RequestInviteDetails**](RequestInviteDetails.md) |  | [required] |
 
 ### Return type
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **team_id** | **String** |  | [required] |
 **user_id** | **String** |  | [required] |
-**body** | [**Member**](Member.md) |  | [required] |
+**body** | [**MemberOfATeam**](MemberOfATeam.md) |  | [required] |
 
 ### Return type
 
@@ -420,7 +420,7 @@ Update the team. You must be an administrator of the team to edit it.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **team_id** | **String** |  | [required] |
-**body** | [**Team**](Team.md) |  | [required] |
+**body** | [**ATeam**](ATeam.md) |  | [required] |
 
 ### Return type
 

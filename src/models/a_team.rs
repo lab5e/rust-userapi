@@ -12,9 +12,7 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Team {
-    #[serde(rename = "teamId", skip_serializing_if = "Option::is_none")]
-    pub team_id: Option<String>,
+pub struct ATeam {
     #[serde(rename = "isPrivate", skip_serializing_if = "Option::is_none")]
     pub is_private: Option<bool>,
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
@@ -23,10 +21,9 @@ pub struct Team {
     pub members: Option<Vec<crate::models::Member>>,
 }
 
-impl Team {
-    pub fn new() -> Team {
-        Team {
-            team_id: None,
+impl ATeam {
+    pub fn new() -> ATeam {
+        ATeam {
             is_private: None,
             tags: None,
             members: None,
